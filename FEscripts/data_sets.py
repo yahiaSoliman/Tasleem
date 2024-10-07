@@ -1,0 +1,12 @@
+class Data:
+    super_admin_username = "33333"
+    super_admin_password = "Password12#"
+    order_total = "1000"
+    order_id = "SO-24-AR-QMQG-0626-0023"
+    store_name = "Stores - TG"
+    vehicle_type = "Motor"
+    phone_number = "97466685234"
+    order_status = "Preparing"
+    merchant_name = "Taza"
+    address = "this is an address"
+    store_name_to_update_settings = "Yarmook - TG"

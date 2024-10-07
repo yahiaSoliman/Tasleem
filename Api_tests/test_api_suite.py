@@ -1,0 +1,43 @@
+import unittest
+
+from Api_tests.driver.test_api_drivers_clocked_in_locations import APIDriverDriversClockInLocation
+from Api_tests.driver.test_api_drivers_driver_clock_in_loc_drive_id import APIDriverDriverClockInLocDriverId
+from Api_tests.driver.test_api_drivers_driver_clock_out_loc_drive_id import APIDriverDriverClockOutLocDriverId
+from Api_tests.driver.test_api_drivers_driver_clock_out_status_drive_id import APIDriverDriverClockOutStatusDriverId
+from Api_tests.driver.test_api_drivers_driver_statuses_all import APIDriverDriverStatusesAll
+from Api_tests.driver.test_api_drivers_failed_delivery_reasons import APIDriverDriveFailedDeliveryReasons
+from test_api_login import APILoginTestSuperAdmin
+from test_api_login import APILoginTestDriver
+from test_api_login import APILoginTestAdmin
+from test_api_logout import APILogoutResponse
+from test_api_logout import APILogoutPermission
+from test_api_refresh_token import APIRefreshToken
+from test_api_refresh_token import APIRefreshTokenPermission
+from Api_tests.driver.test_api_drivers_page import APIDriverDriversPage
+from Api_tests.driver.test_api_drivers_search_autocomplete import APIDriverDriversSearchAutocomplete
+from Api_tests.driver.test_api_drivers_search_autocomplete import APIDriverDriversSearchAutocompleteSearch
+from Api_tests.driver.test_api_driver_status_updates_page import APIDriverDriverStatusUpdatesPage
+
+suite_1 = unittest.TestSuite()
+suite_1.addTest(unittest.TestLoader().loadTestsFromTestCase(APILoginTestSuperAdmin))
+suite_1.addTest(unittest.TestLoader().loadTestsFromTestCase(APILoginTestAdmin))
+suite_1.addTest(unittest.TestLoader().loadTestsFromTestCase(APILoginTestDriver))
+
+suite_2 = unittest.TestSuite()
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APILogoutResponse))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APILogoutPermission))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIRefreshToken))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIRefreshTokenPermission))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriversPage))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriversSearchAutocomplete))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriversSearchAutocompleteSearch))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriverStatusUpdatesPage))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriversClockInLocation))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriverClockInLocDriverId))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriverClockOutLocDriverId))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriverClockOutStatusDriverId))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriverStatusesAll))
+suite_2.addTest(unittest.TestLoader().loadTestsFromTestCase(APIDriverDriveFailedDeliveryReasons))
+
+
+
